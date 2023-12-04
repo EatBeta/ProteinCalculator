@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.6.1.2 (Windows)"/>
+	<meta name="created" content="2023-12-04T07:55:49.279000000"/>
+	<meta name="changed" content="2023-12-04T07:59:09.941000000"/>
+</head>
+<body lang="en-US" dir="ltr"><p> &lt;script&gt;</p>
+<p>    function calculate() {</p>
+<p>        // Get user inputs</p>
+<p>        const name = document.getElementById('name').value;</p>
+<p>        const weight =
+parseFloat(document.getElementById('weight').value);</p>
+<p>        const activityLevel =
+document.getElementById('activityLevel').value;</p>
+<p><br/>
+<br/>
+
+</p>
+<p>        // Constants for protein and calorie calculation</p>
+<p>        const proteinPerKg = 1.8; // Recommended protein intake
+per kg</p>
+<p>        const caloriesPerGram = 4; // Calories per gram of protein</p>
+<p><br/>
+<br/>
+
+</p>
+<p>        // Calculate protein requirement and calories</p>
+<p>        const proteinRequirement = weight * proteinPerKg;</p>
+<p>        const caloriesRequirement = proteinRequirement *
+caloriesPerGram;</p>
+<p><br/>
+<br/>
+
+</p>
+<p>        // Display the result</p>
+<p>        const resultDiv = document.getElementById('result');</p>
+<p>        resultDiv.innerHTML = `</p>
+<p>            &lt;p&gt;Hello, ${name}!&lt;/p&gt;</p>
+<p>            &lt;p&gt;Your daily protein requirement is
+approximately ${proteinRequirement.toFixed(2)} grams.&lt;/p&gt;</p>
+<p>            &lt;p&gt;This corresponds to
+${caloriesRequirement.toFixed(2)} calories.&lt;/p&gt;</p>
+<p>            &lt;p&gt;For palm servings, consider:&lt;/p&gt;</p>
+<p>            &lt;ul&gt;</p>
+<p>                &lt;li&gt;Small palm:
+${proteinRequirement.toFixed(2)} servings&lt;/li&gt;</p>
+<p>                &lt;li&gt;Medium palm: ${(proteinRequirement *
+1.5).toFixed(2)} servings&lt;/li&gt;</p>
+<p>                &lt;li&gt;Large palm: ${(proteinRequirement *
+2).toFixed(2)} servings&lt;/li&gt;</p>
+<p>            &lt;/ul&gt;</p>
+<p>        `;</p>
+<p>    }</p>
+<p>&lt;/script&gt;</p>
+</body>
+</html>
